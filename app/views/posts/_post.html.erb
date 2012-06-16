@@ -1,0 +1,6 @@
+<tr id='<%= "post-#{post.id}" %>' style="background-color:<%= votes_to_color(post.votes)%>;" >
+  <td class="name" ><%= post.name %></td>
+  <td class="votes" ><%= post.votes || 0 %></td>
+  <td></td>
+  <td class="up-vote" ><%= link_to "Up Vote",  upVote_post_path(post), :method=>:put, :remote => true %></td>
+</tr>

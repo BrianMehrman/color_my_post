@@ -1,0 +1,21 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Votes</th>
+    <th></th>
+   
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <%= render 'post', :post => post %>
+<% end %>
+</table>
+
+<br />
+<div id="new-link" >
+<%= link_to 'New Post', new_post_path, :remote => true %>
+</div>
+<div id="new-form"></div>

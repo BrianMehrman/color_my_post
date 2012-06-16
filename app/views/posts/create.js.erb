@@ -1,0 +1,4 @@
+$("#new-form").html('');
+$("#new-link").show();
+$('table tbody').append('<%= escape_javascript render "post", :post => @post %>');
+<%= updateAllColors %>
